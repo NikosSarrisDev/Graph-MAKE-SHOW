@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph_point"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp" />
+
+
+    <TextView
+        android:id="@+id/textview_for_chart_title"
+        android:layout_width="130dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/graph_point"
+        android:text="Chart Options"
+        android:textSize="20dp"
+        android:background="#CCCCCC" />
+
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="260dp"
+        android:id="@+id/ScrollView_under_Chart_Options"
+        android:layout_below="@id/textview_for_chart_title"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="360dp"
+            android:layout_height="260dp">
+
+
+            <CheckBox
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:id="@+id/Checkbox_for_color"
+                android:text="Color"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Checkbox_for_color"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/name_of_line"
+                android:hint="Title"/>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Checkbox_for_color"
+                android:layout_toRightOf="@id/name_of_line"
+                android:layout_marginTop="20dp"
+                android:text="Submit"
+                android:onClick="submitForm"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Checkbox_for_color"
+                android:layout_toLeftOf="@id/name_of_line"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:background="#CCCCCC"
+                android:text="Title"
+                android:textSize="20dp" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/name_of_line"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/Thickness_of_line"
+                android:inputType="number"
+                android:hint="Thickness"/>
+
+            <Button
+                android:id="@+id/submit_button_for_thickness"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/name_of_line"
+                android:layout_toRightOf="@id/Thickness_of_line"
+                android:layout_marginTop="20dp"
+                android:text="Submit"
+                android:onClick="submitForm"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@id/Thickness_of_line"
+                android:layout_below="@id/name_of_line"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:text="Thickness"
+                android:textSize="20dp" />
+
+            <CheckBox
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Thickness_of_line"
+                android:layout_marginTop="20dp"
+                android:id="@+id/setDrawable_Points_of_the_line"
+                android:text="Show Drawable Points" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textview_for_graph_title"
+        android:layout_width="130dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/ScrollView_under_Chart_Options"
+        android:text="Graph Options"
+        android:textSize="20dp"
+        android:background="#CCCCCC" />
+
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="260dp"
+        android:id="@+id/ScrollView_under_Graph_Options"
+        android:layout_below="@id/textview_for_graph_title"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="360dp"
+            android:layout_height="260dp">
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/name_of_graph"
+                android:hint="Title"/>
+
+            <Button
+                android:id="@+id/submit_button_for_graph_name"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/name_of_graph"
+                android:layout_marginTop="20dp"
+                android:text="Submit"
+                android:onClick="submitForm"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/name_of_graph"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/Text_size_of_graph"
+                android:inputType="number"
+                android:hint="Text Size"/>
+
+            <CheckBox
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:id="@+id/Show_Legend_in_Graph"
+                android:layout_below="@id/Text_size_of_graph"
+                android:layout_marginTop="20dp"
+                android:text="Show Legend"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Show_Legend_in_Graph"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/Title_of_X_Axis"
+                android:hint="Title of X Axis"/>
+
+            <Button
+                android:id="@+id/submit_button_for_X_Axis_name"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/Title_of_X_Axis"
+                android:layout_below="@id/Show_Legend_in_Graph"
+                android:layout_marginTop="20dp"
+                android:text="Submit"
+                android:onClick="submitForm"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/Title_of_X_Axis"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/Title_of_Y_Axis"
+                android:hint="Title of Y Axis"/>
+
+            <Button
+                android:id="@+id/submit_button_for_Y_Axis_name"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/Title_of_Y_Axis"
+                android:layout_below="@id/Title_of_X_Axis"
+                android:layout_marginTop="20dp"
+                android:text="Submit"
+                android:onClick="submitForm"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
