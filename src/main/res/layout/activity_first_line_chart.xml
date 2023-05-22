@@ -29,10 +29,27 @@
             android:layout_width="360dp"
             android:layout_height="260dp">
 
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/form_of_equasion"
+                android:hint="Equasion"/>
+
+            <Button
+                android:id="@+id/submit_button_for_eqausion"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/form_of_equasion"
+                android:layout_marginTop="20dp"
+                android:text="Submit"
+                android:onClick="submitForm"/>
 
             <CheckBox
                 android:layout_width="200dp"
                 android:layout_height="50dp"
+                android:layout_below="@id/form_of_equasion"
                 android:id="@+id/Checkbox_for_color"
                 android:text="Color"/>
 
@@ -155,6 +172,16 @@
                 android:id="@+id/Text_size_of_graph"
                 android:inputType="number"
                 android:hint="Text Size"/>
+
+            <Button
+                android:id="@+id/submit_button_for_graph_text_size"
+                android:layout_width="100dp"
+                android:layout_below="@id/name_of_graph"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/Text_size_of_graph"
+                android:layout_marginTop="20dp"
+                android:text="Submit"
+                android:onClick="submitForm"/>
 
             <CheckBox
                 android:layout_width="200dp"
