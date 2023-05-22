@@ -28,6 +28,9 @@ public class LineChartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_line_chart);
 
+        //Declare a button for changing the equasion
+        Button equasion_Button = (Button) findViewById(R.id.submit_button_for_eqausion);
+
         //Declare the check box foe showing the dataPoints
         CheckBox setDrawCheckbox = (CheckBox) findViewById(R.id.setDrawable_Points_of_the_line);
 
@@ -38,16 +41,24 @@ public class LineChartActivity extends AppCompatActivity {
 
         Button submit_button_for_name_of_graph = (Button) findViewById(R.id.submit_button_for_graph_name);
 
+        Button submit_button_for_text_Size_of_Graph = (Button) findViewById(R.id.submit_button_for_graph_text_size);
+
+        //EditText for equasion
+        EditText editText_for_Equasion = (EditText) findViewById(R.id.form_of_equasion);
+
         //Declare a EditText for name of graph
         EditText editText_for_graph = (EditText) findViewById(R.id.name_of_graph);
 
-        //Declare a EditText for name of line
+        //Declare an EditText for text Size of the Graph
+        EditText editText_for_text_Size_of_Graph = (EditText) findViewById(R.id.Text_size_of_graph);
+
+        //Declare an EditText for name of line
         EditText editText_for_line =(EditText) findViewById(R.id.name_of_line);
 
-        //Declare a EditText for Thickness fo line
+        //Declare an EditText for Thickness fo line
         EditText editText_for_Thickness = (EditText) findViewById(R.id.Thickness_of_line);
 
-        //Declare an Checkbox for showing the Legend in graph
+        //Declare a Checkbox for showing the Legend in graph
         CheckBox Show_the_Legend = (CheckBox) findViewById(R.id.Show_Legend_in_Graph);
 
         //Declare an EditText for changing the name of X Axis
@@ -68,12 +79,32 @@ public class LineChartActivity extends AppCompatActivity {
         //form series (curve for graph)
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>();
 
+//        equasion_Button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                /////////////////////////////////////////////////////////////////////
+//
+//                double y;
+//                for (int x=0;x<90;x++){
+//                    y = Double.parseDouble(editText_for_Equasion.getText().toString());
+////            y = x + 1;
+//                    series.appendData(new DataPoint(x,y),true,90);
+//                }
+//
+//                graph.addSeries(series);
+//
+//                /////////////////////////////////////////////////////////////////////
+//            }
+//        });
+
         double y;
         for (int x=0;x<90;x++){
             y = Math.sin(2*x*0.2) - 2*Math.sin(x*0.2);
 //            y = x + 1;
             series.appendData(new DataPoint(x,y),true,90);
         }
+//        series.appendData(new DataPoint(2,3),true,50);
+//        series.appendData(new DataPoint(5,7) , true,50);
 
         graph.addSeries(series);
 
@@ -119,7 +150,8 @@ public class LineChartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                series.setThickness(editText_for_Thickness.getText().toString());
-                series.setThickness(12);
+                //Now setThickness have only int values
+                series.setThickness(Integer.parseInt(editText_for_Thickness.getText().toString()));
             }
         });
 
@@ -148,6 +180,13 @@ public class LineChartActivity extends AppCompatActivity {
         graph.setTitleColor(Color.BLUE);
 
         ////////////////////////////////////////////////////////////////////////
+
+        submit_button_for_text_Size_of_Graph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                graph.setTitleTextSize(Integer.parseInt(editText_for_text_Size_of_Graph.getText().toString()));
+            }
+        });
 
         //Legend
 
