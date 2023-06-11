@@ -2,6 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+
+            <data android:scheme="mailto" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,22 +25,31 @@
         android:theme="@style/Theme.MyTestApplication"
         tools:targetApi="31">
         <activity
-            android:name=".FullScreen_point_Activity"
+            android:name=".Custom_bar_Chart"
             android:exported="false" />
         <activity
-            android:name=".FullScreen_bar_Activity"
+            android:name=".SCATTER_Chart_Activity"
             android:exported="false" />
         <activity
-            android:name=".FullScreen_line_Activity"
+            android:name=".LINE_Chart_Activity"
             android:exported="false" />
         <activity
-            android:name=".PointChartActivity"
+            android:name=".COMBINED_Chart_Activity"
             android:exported="false" />
         <activity
-            android:name=".BarChartActivity"
+            android:name=".CANDLESTICK_Chart_Activity"
             android:exported="false" />
         <activity
-            android:name=".LineChartActivity"
+            android:name=".BUBBLE_Chart_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".RADAR_Chart_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PIE_Chart_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".BAR_Chart_Activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
