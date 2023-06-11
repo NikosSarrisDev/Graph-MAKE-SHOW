@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_height="wrap_content"
+            android:id="@+id/go_bar_chart"
+            android:text="BAR CHART"
+            android:layout_width="150dp"
+            android:layout_marginTop="17dp"
+            android:background="#133B80"/>
+        <Button
+            android:layout_height="wrap_content"
+            android:id="@+id/go_pie_chart"
+            android:text="PIE CHART"
+            android:layout_width="150dp"
+            android:layout_marginTop="17dp"
+            android:background="#133B80"/>
+        <Button
+            android:layout_height="wrap_content"
+            android:id="@+id/go_radar_chart"
+            android:text="RADAR CHART"
+            android:layout_width="150dp"
+            android:layout_marginTop="17dp"
+            android:background="#133B80"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:id="@+id/go_bubble_chart"
+            android:text="BUBBLE CHART"
+            android:layout_width="150dp"
+            android:layout_marginTop="17dp"
+            android:background="#133B80"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:id="@+id/go_candle_stick_chart"
+            android:text="CANDLESTICK CHART"
+            android:layout_width="150dp"
+            android:layout_marginTop="17dp"
+            android:background="#133B80"/>
+
+<!--        <Button-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/go_combined_chart"-->
+<!--            android:text="COMBINED CHART"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_marginTop="17dp"-->
+<!--            android:background="#133B80"/>-->
+
+        <Button
+            android:layout_height="wrap_content"
+            android:id="@+id/go_line_chart"
+            android:text="LINE CHART"
+            android:layout_width="150dp"
+            android:layout_marginTop="17dp"
+            android:background="#133B80"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:id="@+id/go_scatter_chart"
+            android:text="SCATTER CHART"
+            android:layout_width="150dp"
+            android:layout_marginTop="17dp"
+            android:background="#133B80"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

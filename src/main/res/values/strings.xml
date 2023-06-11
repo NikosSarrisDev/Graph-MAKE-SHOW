@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyTestApplication</string>
+
+    <string-array name="options">
+        <item>More Options</item>
+        <item>Import CSV File</item>
+        <item>Send to Email</item>
+        <item>Save as Image</item>
+        <item>Create your graph</item>
+    </string-array>
+</resources>
