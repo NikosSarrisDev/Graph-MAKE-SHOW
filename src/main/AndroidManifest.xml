@@ -25,6 +25,45 @@
         android:theme="@style/Theme.MyTestApplication"
         tools:targetApi="31">
         <activity
+            android:name=".SCATTER_CSV_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".RADAR_CSV_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".PIE_CSV_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".LINE_CSV_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".CANDLESTICK_CSV_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".BUBBLE_CSV_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".BAR_CSV_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_scatter_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_radar_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_pie_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_candlestick_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_line_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_Bubble_Chart"
+            android:exported="false" />
+        <activity
             android:name=".Custom_bar_Chart"
             android:exported="false" />
         <activity
